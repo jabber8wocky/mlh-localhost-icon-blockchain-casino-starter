@@ -3,7 +3,7 @@
   "method": "icx_call",
   "params": {
     "from": "hxac5688caf5a0c9742cffab2311d7b5728c569d10",
-    "to": "cxfc5d18a9477c5e90f0d8da29a186071f0f83a6a2",
+    "to": "cx7b5e1a2f68ddfdbca9e2aa16fb66ed2d0b08939f",
     "dataType": "call",
     "data": {
       "method": "get_results"

@@ -1,4 +1,5 @@
 import json
+import sys
 
 from flask import Flask, render_template, jsonify, request
 
@@ -17,6 +18,8 @@ application = Flask(__name__)
 
 @application.route("/api/transactions", methods=["GET"])
 def get_transactions_route():
+    print('>> Hello world!', file=sys.stderr)
+
     transaction_list = get_transactions()
 
     score_balance = get_casino_balance()
@@ -38,7 +41,8 @@ def get_transactions_route():
         "account_balance": account_balance,
         "latest_transaction": latest_transaction,
     }
-
+    print('Hello world!', file=sys.stderr)
+    print(response)
     return jsonify(response)
 
 
@@ -77,4 +81,5 @@ def main():
 
 
 if __name__ == "__main__":
+    print('Hello world!!!', file=sys.stderr)
     application.run(debug=config.DEBUG, host=config.HOST, port=config.PORT)
